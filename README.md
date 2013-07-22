@@ -13,7 +13,8 @@ import whalie
 whalie.halieise()
 ```
 
-All your while loops should now loop only while the condition is still running.
+Now, instead of the contents of `while` loops executing while the condition is
+`True`, they will now loop only while the condition is still being calculated.
 
 #Example
 
