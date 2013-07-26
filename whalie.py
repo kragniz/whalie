@@ -6,6 +6,7 @@ import time
 import hashlib
 
 def halieise():
+    '''Read in the source, convert the while loops, then run it.'''
     source = sys.argv[0]
     code = open(source).read()
     code = re.sub('(.+\.halieise.+)', '', code)
@@ -14,6 +15,7 @@ def halieise():
     sys.exit()
 
 def a(func, *args, **kwargs):
+    '''Return a function which wraps the given function to run asynchronously.'''
     @wraps(func)
     def async_func(*args, **kwargs):
         f = Thread(target = func,
@@ -24,11 +26,16 @@ def a(func, *args, **kwargs):
     return lambda: async_func(*args, **kwargs)
 
 def c(f, done):
+    '''
+    Wait until the function f has completed, then append something to the
+    second argument, which should be a list. Returns the result of f.
+    '''
     res = f()
     done.append(1)
     return res
 
 def convert_loops(code, num=0):
+    '''Return a copy of the given code with while loops converted.'''
     newLoop = '''{i}{r} = []
 {i}whalie.a(lambda: whalie.c(lambda: {command}, {r}))()
 {i}whalie!loop not {r}:
