@@ -10,8 +10,6 @@ def halieise():
     code = open(source).read()
     code = re.sub('(.+\.halieise.+)', '', code)
     code = convert_loops(code)
-    with open('out.py', 'w') as f:
-        f.write(code)
     exec(code)
     sys.exit()
 
