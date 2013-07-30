@@ -1,8 +1,9 @@
 #Whalie - Halie Style While Loops
 
-*Are while loops not exotic enough for you? Have you ever felt the need to
-violate python in terrible ways? Are you a mechanical engineer and have
-misinterpreted what a while loop actually does and want to emulate your dreams?*
+*Are while loops not exotic enough for you? Have you ever wanted to make
+debugging your software much harder for no real reason? Are you a mechanical 
+engineer and have misinterpreted what a while loop actually does and want to
+emulate your dreams?*
 
 If any of those apply to you, you still shouldn't use this module.
 
