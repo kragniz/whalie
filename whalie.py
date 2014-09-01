@@ -5,10 +5,9 @@ import re
 import time
 import hashlib
 
-def halieise():
+def halieise(filename):
     '''Read in the source, convert the while loops, then run it.'''
-    source = sys.argv[0]
-    code = open(source).read()
+    code = open(filename).read()
     code = re.sub('(.+\.halieise.+)', '', code)
     code = convert_loops(code)
     exec(code)

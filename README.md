@@ -11,7 +11,7 @@ To use whalie loops, import the module and haliese your code.
 
 ```python
 import whalie
-whalie.halieise()
+whalie.halieise(__file__)
 ```
 
 Now, instead of the contents of `while` loops executing while the condition is
@@ -23,7 +23,7 @@ Now, instead of the contents of `while` loops executing while the condition is
 #test.py
 import time
 import whalie
-whalie.halieise()
+whalie.halieise(__file__)
 
 def long_thing():
     print 'starting long thing'
@@ -37,8 +37,8 @@ while long_thing():
 print 'ended program'
 ```
 
-```
-louis@lanaya:~/git/whalie$ python test.py 
+```bash
+$ python test.py
 starting long thing
 doing something
 doing something
